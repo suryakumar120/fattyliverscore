@@ -43,14 +43,14 @@ $(function () {
     function SaveDataToServer(redirectUrl) {
         // Store dataObject in local storage
         localStorage.setItem('dataObject', JSON.stringify(dataObject));
-        
+
         // Make a POST request to the server
         $.post('https://same-server-dev.azurewebsites.net/save-data', { data: JSON.stringify(dataObject) })
-            .done(function(response) {
+            .done(function (response) {
                 // Redirect to the specified URL on success
                 window.location.href = redirectUrl;
             })
-            .fail(function(error) {
+            .fail(function (error) {
                 // Handle the error if the request fails
                 console.error('Error saving data:', error);
                 // Optionally display an error message to the user
@@ -68,26 +68,26 @@ $(function () {
     });
     $('#submit-btn2').on('click', function (event) {
         event.preventDefault();
-    
+
         // Get values from form fields
         var dataObject = {};
         dataObject.FullName = $('#txtname').val();
         dataObject.EmailId = $('#txtemail').val();
         dataObject.City = $('#txtcity').val();
         dataObject.PhoneNo = $('#txtmobile').val();
-        
+
         // Check if any field is empty
         if (!dataObject.FullName || !dataObject.EmailId || !dataObject.City || !dataObject.PhoneNo) {
             alert('Please fill in all fields');
             return; // Prevent further execution
         }
-    
+
         // Output dataObject to console
         console.log(dataObject);
         localStorage.setItem('dataObject', JSON.stringify(dataObject));
         window.location.href = '3.html';
     });
-    
+
     $('#submit-btn3').on('click', function (event) {
         event.preventDefault();
         console.log("clicked3")
@@ -220,7 +220,16 @@ $(function () {
         saveDataAndRedirect('8.html')
 
     });
-
+    $('#bmi-btn').on('click', function () {
+        var win = window.open('https://nash24x7.com/bmi/', '_blank');
+        if (win) {
+            //Browser has allowed it to be opened
+            win.focus();
+        } else {
+            //Browser has blocked it
+            alert('Please allow popups for this website');
+        }
+    })
     $('input[name="bmi"]').on('click', function () {
         // Get the value of the selected BMI range
         var bmiRange = $(this).val();
@@ -372,7 +381,7 @@ $(function () {
 
         // Assign scores based on the selected option
         if (physicallyActiveAnswer === 'Yes') {
-           Total = 0;
+            Total = 0;
         } else if (physicallyActiveAnswer === 'No') {
             Total = 1;
         }
@@ -442,7 +451,7 @@ $(function () {
         dataObject.Total += Total;
 
         if (dataObject.Total > 7) {
-            
+
             // Store dataObject in session storage
             // localStorage.setItem('dataObject', JSON.stringify(dataObject), function () {
             //     // Callback function executed after the dataObject is stored
@@ -451,7 +460,7 @@ $(function () {
             // });
             SaveDataToServer('15.html')
         } else {
-            
+
 
             // Store dataObject in session storage
             // localStorage.setItem('dataObject', JSON.stringify(dataObject), function () {
@@ -494,7 +503,7 @@ $(function () {
         console.log("total= ", totalScore);
         dataObject.Total += Total;
         if (dataObject.Total > 7) {
-            
+
 
             // Store dataObject in session storage
             // localStorage.setItem('dataObject', JSON.stringify(dataObject), function () {
@@ -504,7 +513,7 @@ $(function () {
             // });
             SaveDataToServer('15.html')
         } else {
-           
+
 
             // Store dataObject in session storage
             SaveDataToServer('16.html')
@@ -522,7 +531,7 @@ $(function () {
             // Display total score if it exists
             if (dataFinal.Total !== undefined) {
                 console.log("dataFinal.Total =", dataObject);
-                $("#lblResult").text( dataFinal.Total);
+                $("#lblResult").text(dataFinal.Total);
             } else {
                 console.log("Total score is not defined in dataFinal.");
             }

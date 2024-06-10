@@ -9,7 +9,10 @@
   font-weight: 700;
   src: url("../fonts/FontsFree-Net-arial-bold.ttf") format("truetype");
 }
-
+.superscript {
+  vertical-align: super;
+  font-size: smaller;
+}
 
 .screen a {
   display: contents;
