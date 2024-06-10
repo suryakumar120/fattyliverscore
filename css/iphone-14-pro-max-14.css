@@ -1,0 +1,227 @@
+/* screen - iphone-14-pro-max-14 */
+
+.iphone-14-pro-max-14 {
+  align-items: flex-start;
+  background-color: var(--white);
+  border: 1px none;
+  display: flex;
+  flex-direction: column;
+  height: 932px;
+  overflow: hidden;
+  width: 430px;
+}
+
+.iphone-14-pro-max-14 .frame-818 {
+  align-items: flex-start;
+  display: flex;
+  margin-left: -112px;
+  margin-top: -97px;
+  min-width: 309px;
+}
+
+.iphone-14-pro-max-14 .overlap-group2 {
+  align-self: center;
+  height: 594px;
+  margin-right: 4.0px;
+  margin-top: 19px;
+  position: relative;
+  width: 340px;
+}
+
+.iphone-14-pro-max-14 .frame-822 {
+  background-color: var(--turquoise-blue);
+  border-radius: 24px 24px 0px 0px;
+  height: 451px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 340px;
+}
+
+.iphone-14-pro-max-14 .frame-821 {
+  background-color: var(--charlotte);
+  border-radius: 24px 24px 0px 0px;
+  height: 325px;
+  left: 0;
+  position: absolute;
+  top: 269px;
+  width: 340px;
+}
+
+.iphone-14-pro-max-14 .radio-group {
+  -webkit-backdrop-filter: blur(8px) brightness(100%);
+  backdrop-filter: blur(8px) brightness(100%);
+  background-color: var(--white-2);
+  border-radius: 16px;
+  box-shadow: 0px 32px 32px -24px #0000001a;
+  flex-direction: column;
+  height: 96px;
+  left: 74px;
+  padding: 8px 0;
+  position: absolute;
+  top: 403px;
+  width: 197px;
+}
+
+.iphone-14-pro-max-14 .item {
+  align-items: flex-start;
+  display: flex;
+  width: 181px;
+}
+
+.iphone-14-pro-max-14 .radio-wrapper {
+  border-radius: 8px;
+  gap: 8px;
+  height: 40px;
+  padding: 0 8px;
+  width: 181px;
+}
+
+.iphone-14-pro-max-14 .controller {
+  align-items: flex-start;
+  background-color: var(--storm-dust);
+  border-radius: 24px;
+  display: flex;
+  min-width: 24px;
+}
+
+.iphone-14-pro-max-14 .label {
+  letter-spacing: 0;
+  line-height: 20px;
+  margin-bottom: 2.0px;
+  white-space: nowrap;
+  width: 133px;
+}
+
+.iphone-14-pro-max-14 .controller-1 {
+  background-color: var(--white);
+  border-radius: 24px;
+  height: 24px;
+  width: 24px;
+}
+
+.iphone-14-pro-max-14 .frame-825 {
+  align-items: center;
+  display: flex;
+  gap: 22px;
+  height: 40px;
+  justify-content: flex-end;
+  left: 161px;
+  min-width: 160px;
+  position: absolute;
+  top: 538px;
+}
+
+.iphone-14-pro-max-14 .my-button {
+  letter-spacing: 0;
+  line-height: 20px;
+  margin-bottom: 2.0px;
+  min-width: 62px;
+  white-space: nowrap;
+}
+
+.iphone-14-pro-max-14 .button {
+  align-items: flex-start;
+  background-color: var(--shark);
+  border-radius: 100000px;
+  display: flex;
+  height: 40px;
+  min-width: 62px;
+  padding: 9px 14px;
+}
+
+.iphone-14-pro-max-14 .my-button-1 {
+  letter-spacing: 0;
+  line-height: 20px;
+  white-space: nowrap;
+}
+
+.iphone-14-pro-max-14 .frame-824 {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  left: 26px;
+  min-height: 77px;
+  position: absolute;
+  top: 305px;
+  width: 292px;
+}
+
+.iphone-14-pro-max-14 .are-have-you-experie {
+  letter-spacing: 0;
+  line-height: 20px;
+  margin-top: -1px;
+  min-height: 48px;
+  text-align: center;
+  width: 292px;
+}
+
+.iphone-14-pro-max-14 .this-question-is-only-for-women {
+  letter-spacing: 0;
+  line-height: 14.1px;
+  min-height: 16px;
+  white-space: nowrap;
+  width: 176px;
+}
+
+.iphone-14-pro-max-14 .frame-2 {
+  align-items: flex-start;
+  display: flex;
+  gap: 4px;
+  height: 4px;
+  left: 18px;
+  min-width: 308px;
+  position: absolute;
+  top: 282px;
+}
+
+.iphone-14-pro-max-14 .rectangle-7 {
+  background-color: var(--shark-2);
+  width: 25px;
+}
+
+.iphone-14-pro-max-14 .rectangle-73 {
+  background-color: var(--shark-2);
+  width: 24px;
+}
+
+.iphone-14-pro-max-14 .rectangle-738 {
+  background-color: #262626;
+  width: 25px;
+}
+
+.iphone-14-pro-max-14 .frame-823 {
+  background-color: var(--white);
+  border-radius: 24px 24px 0px 0px;
+  height: 216px;
+  left: 21px;
+  position: absolute;
+  top: 53px;
+  width: 300px;
+}
+
+.iphone-14-pro-max-14 .frame-820 {
+  background-image: url(../img/menopause-1-1-1@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 218px;
+  left: 59px;
+  position: absolute;
+  top: 51px;
+  width: 224px;
+}
+
+.iphone-14-pro-max-14 .frame-819 {
+  align-items: flex-start;
+  align-self: flex-end;
+  display: flex;
+  margin-right: -76px;
+  margin-top: 6px;
+  min-width: 281px;
+}
+
+.iphone-14-pro-max-14 .rectangle {
+  border-radius: 10px;
+  height: 4px;
+}

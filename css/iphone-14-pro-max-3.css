@@ -1,0 +1,132 @@
+/* screen - iphone-14-pro-max-3 */
+
+.iphone-14-pro-max-3 {
+  align-items: flex-start;
+  background-color: var(--white);
+  border: 1px none;
+  display: flex;
+  flex-direction: column;
+  height: 932px;
+  overflow: hidden;
+  width: 430px;
+}
+
+.iphone-14-pro-max-3 .frame-940 {
+  align-items: flex-start;
+  display: flex;
+  margin-left: -111px;
+  margin-top: -101px;
+  min-width: 309px;
+}
+
+.iphone-14-pro-max-3 .overlap-group2 {
+  align-self: center;
+  height: 594px;
+  margin-right: 2.0px;
+  margin-top: 19px;
+  position: relative;
+  width: 340px;
+}
+
+.iphone-14-pro-max-3 .frame-939 {
+  background-color: #64e0f9;
+  border-radius: 24px 24px 0px 0px;
+  height: 451px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 340px;
+}
+
+.iphone-14-pro-max-3 .frame-938 {
+  background-color: var(--charlotte);
+  border-radius: 24px 24px 0px 0px;
+  height: 325px;
+  left: 0;
+  position: absolute;
+  top: 269px;
+  width: 340px;
+}
+
+.iphone-14-pro-max-3 .frame-937 {
+  align-items: center;
+  display: flex;
+  gap: 22px;
+  height: 40px;
+  justify-content: flex-end;
+  left: 161px;
+  min-width: 160px;
+  position: absolute;
+  top: 543px;
+}
+
+.iphone-14-pro-max-3 .my-button {
+  letter-spacing: 0;
+  line-height: 20px;
+  margin-bottom: 2.0px;
+  min-width: 62px;
+  white-space: nowrap;
+}
+
+.iphone-14-pro-max-3 .button {
+  align-items: flex-start;
+  background-color: var(--shark);
+  border-radius: 100000px;
+  display: flex;
+  height: 40px;
+  min-width: 62px;
+  padding: 9px 14px;
+}
+
+.iphone-14-pro-max-3 .my-button-1 {
+  letter-spacing: 0;
+  line-height: 20px;
+  white-space: nowrap;
+}
+
+.iphone-14-pro-max-3 .disclaimer-this-risk {
+  left: 34px;
+  letter-spacing: 0;
+  line-height: 20px;
+  position: absolute;
+  text-align: justify;
+  top: 302px;
+  width: 272px;
+}
+
+.iphone-14-pro-max-3 .span1 {
+  color: var(--shark);
+  font-family: var(--font-family-arial-bold);
+  font-size: var(--font-size-xs);
+  font-weight: 700;
+}
+
+.iphone-14-pro-max-3 .frame-935 {
+  background-color: var(--white);
+  border-radius: 24px 24px 0px 0px;
+  height: 216px;
+  left: 21px;
+  position: absolute;
+  top: 53px;
+  width: 300px;
+}
+
+.iphone-14-pro-max-3 .frame-934 {
+  background-image: url(../img/hg2w-gzck-211029-1-2@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 172px;
+  left: 63px;
+  position: absolute;
+  top: 75px;
+  width: 216px;
+}
+
+.iphone-14-pro-max-3 .frame-941 {
+  align-items: flex-start;
+  align-self: flex-end;
+  display: flex;
+  margin-right: -77px;
+  margin-top: 6px;
+  min-width: 281px;
+}

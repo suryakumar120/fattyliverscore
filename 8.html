@@ -1,0 +1,250 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Fattyliverscore</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    <link rel="shortcut icon" type="image/png" href="https://animaproject.s3.amazonaws.com/home/favicon.png" />
+    <meta name="og:type" content="website" />
+    <meta name="twitter:card" content="photo" />
+    <link rel="stylesheet" type="text/css" href="css/iphone-14-pro-max-8.css" />
+    <link rel="stylesheet" type="text/css" href="css/styleguide.css" />
+    <link rel="stylesheet" type="text/css" href="css/globals.css" />
+      <style>
+          .button {
+            background-color: #04AA6D;
+            border: none;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+        }
+
+        .container1 {
+            height: 100%;
+            position: relative
+        }
+
+        .wrapper {
+            height: 100%;
+        }
+
+        .button1 {
+            border-radius: 2px;
+        }
+
+        .button2 {
+            border-radius: 4px;
+        }
+
+        .button3 {
+            border-radius: 8px;
+        }
+
+        .button4 {
+            border-radius: 12px;
+        }
+
+        .button5 {
+            border-radius: 50%;
+        }
+
+        .btn {
+            border: none;
+            background-color: inherit;
+            font-size: 16px;
+            cursor: pointer;
+            display: inline-block;
+        }
+
+            .btn:hover {
+                background: #eee;
+            }
+
+        .success {
+            color: green;
+        }
+
+        .info {
+            color: dodgerblue;
+        }
+
+        .warning {
+            color: orange;
+        }
+
+        .danger {
+            color: red;
+        }
+
+        .default {
+            color: black;
+        }
+
+        /* The container */
+        .container {
+            display: block;
+            position: relative;
+            padding-left: 35px;
+            margin-bottom: 12px;
+            cursor: pointer;
+            font-size: 22px;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+            /* Hide the browser's default radio button */
+            .container input {
+                position: absolute;
+                opacity: 0;
+                cursor: pointer;
+            }
+
+        /* Create a custom radio button */
+        .checkmark {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 25px;
+            width: 25px;
+            background-color: #eee;
+            border-radius: 50%;
+        }
+
+        /* On mouse-over, add a grey background color */
+        .container:hover input ~ .checkmark {
+            background-color: #ccc;
+        }
+
+        /* When the radio button is checked, add a blue background */
+        .container input:checked ~ .checkmark {
+            background-color: #2196F3;
+        }
+
+        /* Create the indicator (the dot/circle - hidden when not checked) */
+        .checkmark:after {
+            content: "";
+            position: absolute;
+            display: none;
+        }
+
+        /* Show the indicator (dot/circle) when checked */
+        .container input:checked ~ .checkmark:after {
+            display: block;
+        }
+
+        /* Style the indicator (dot/circle) */
+        .container .checkmark:after {
+            top: 9px;
+            left: 9px;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: white;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="container-center-horizontal">
+              <div class="iphone-14-pro-max-8 screen">
+                  <div class="frame-886">
+                      <div class="ellipse-container">
+                          <img class="ellipse-1" src="img/ellipse-1-1@2x.png" alt="Ellipse 1" />
+                          <div class="ellipse-2"></div>
+                      </div>
+                  </div>
+                  <div class="overlap-group2">
+                      <div class="frame-885"></div>
+                      <div class="frame-884"></div>
+                      <div class="frame-882">
+
+
+                          <div class="my-button inter-medium-shark-15px">
+                            <button ID="prev-8" class="btn default"  runat="server" Text="Previous" OnClick="btnPrv_Click">Previous</button>  
+  
+                          </div>
+                          <button ID="submit-btn8" class="button"  runat="server" Text="Next" OnClick="btnNext_Click">Next</button>                       </div>
+                          <div class="radio-group radio">
+                            <div class="item-0">
+                                <div class="radio-wrapper radio">
+                                    <label class="container arial-bold-storm-dust-12px">
+                                        <span class="arial-bold-storm-dust-12px">&lt;23</span>
+                                        <input type="radio" id="rad23" name="bmi" value="<23" checked>
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="radio-wrapper radio">
+                                    <label class="container arial-bold-storm-dust-12px">
+                                        <span class="arial-bold-storm-dust-12px">23-24.9</span>
+                                        <input type="radio" id="rad2324" name="bmi" value="23-24.9">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="radio-wrapper radio">
+                                    <label class="container arial-bold-storm-dust-12px">
+                                        <span class="arial-bold-storm-dust-12px">25-26.9</span>
+                                        <input type="radio" id="rad2526" name="bmi" value="25-26.9">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="radio-wrapper radio">
+                                    <label class="container arial-bold-storm-dust-12px">
+                                        <span class="arial-bold-storm-dust-12px">&GreaterEqual;27</span>
+                                        <input type="radio" id="rad27" name="bmi" value="&GreaterEqual;27">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                      <div class="button-1">
+                          <div class="my-button-2 my-button-3 inter-medium-white-15px">
+                            <button ID="btnNext" class="button"  runat="server" Text="Next" OnClick="btnNext_Click">Calculate BMI</button> 
+                          </div>
+                      </div>
+                      <div >
+                        <div  style="align-items: flex-start;display: flex; flex-direction: column;  gap: 19px; left: 16px;  position: absolute;  top: 286px;  width: 311px;">
+                          <div class="frame-879"></div>
+                          <div>
+                              <p class="calculate-your-bmi-body-mass-index inter-semi-bold-shark-16px">
+                                  <span class="inter-semi-bold-shark-16px">&nbsp;What is Your BMI (Body Mass Index) ?</span>
+                              </p>
+                            
+                          </div>
+                      </div>
+                      </div>
+                      <div class="frame-878"></div>
+                      <div class="frame-877"></div>
+                  </div>
+                  <div class="frame-887">
+                      <div class="ellipse-container-1" style="height: 135px; position: relative; width: 281px;">
+                          <img class="ellipse-1" src="img/ellipse-1-1@2x.png" alt="Ellipse 1" />
+                          <div class="ellipse-2-1"></div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+    </form>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/js/main.js"></script>
+    <script>
+        function btnPrv_Click() {
+            window.history.back();
+        }
+        localStorage.setItem('total','0');
+    </script>
+</body>
+</html>

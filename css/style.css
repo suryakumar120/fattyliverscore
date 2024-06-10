@@ -1,0 +1,27 @@
+
+
+
+ /* 1.html */
+
+ .form-container {
+    align-items: flex-start;
+    border-radius: 20px;
+    display: flex;
+    height: 45px;
+    min-width: 266px;
+    padding: 12.1px 17.7px;
+    position: absolute;
+    flex-direction: column; /* Added to align items vertically */
+}
+.input-field {
+    align-items: flex-start;
+    border-radius: 20px;
+    display: flex;
+    height: 45px;
+    min-width: 266px;
+    /* margin-bottom: 2px; Added margin for spacing */
+    /* padding: 5px; */
+}
+.error-message {
+    color: red;
+}

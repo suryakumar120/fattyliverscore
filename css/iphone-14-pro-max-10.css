@@ -1,0 +1,201 @@
+/* screen - iphone-14-pro-max-10 */
+
+.iphone-14-pro-max-10 {
+  align-items: flex-start;
+  background-color: var(--white);
+  border: 1px none;
+  display: flex;
+  flex-direction: column;
+  height: 932px;
+  overflow: hidden;
+  width: 430px;
+}
+
+.iphone-14-pro-max-10 .frame-865 {
+  align-items: flex-start;
+  display: flex;
+  justify-content: flex-end;
+  margin-left: -111px;
+  margin-top: -101px;
+  min-width: 309px;
+}
+
+.iphone-14-pro-max-10 .overlap-group2 {
+  align-self: center;
+  height: 594px;
+  margin-right: 2.0px;
+  margin-top: 19px;
+  position: relative;
+  width: 340px;
+}
+
+.iphone-14-pro-max-10 .frame-864 {
+  background-color: var(--turquoise-blue);
+  border-radius: 24px 24px 0px 0px;
+  height: 451px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 340px;
+}
+
+.iphone-14-pro-max-10 .frame-863 {
+  background-color: var(--charlotte);
+  border-radius: 24px 24px 0px 0px;
+  height: 325px;
+  left: 0;
+  position: absolute;
+  top: 269px;
+  width: 340px;
+}
+
+.iphone-14-pro-max-10 .frame-862 {
+  align-items: center;
+  display: flex;
+  gap: 22px;
+  height: 40px;
+  justify-content: flex-end;
+  left: 160px;
+  min-width: 160px;
+  position: absolute;
+  top: 542px;
+}
+
+.iphone-14-pro-max-10 .my-button {
+  letter-spacing: 0;
+  line-height: 20px;
+  margin-bottom: 2.0px;
+  min-width: 62px;
+  white-space: nowrap;
+}
+
+.iphone-14-pro-max-10 .button {
+  align-items: flex-start;
+  background-color: var(--shark);
+  border-radius: 100000px;
+  display: flex;
+  height: 40px;
+  min-width: 62px;
+  padding: 9px 14px;
+}
+
+.iphone-14-pro-max-10 .my-button-1 {
+  letter-spacing: 0;
+  line-height: 20px;
+  white-space: nowrap;
+}
+
+.iphone-14-pro-max-10 .glycated-haemoglobin-test {
+  color: var(--storm-dust-2);
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-xxs);
+  font-weight: 600;
+  left: 86px;
+  letter-spacing: 0;
+  line-height: 12.6px;
+  position: absolute;
+  top: 488px;
+  white-space: nowrap;
+}
+
+.iphone-14-pro-max-10 .radio-group {
+  -webkit-backdrop-filter: blur(8px) brightness(100%);
+  backdrop-filter: blur(8px) brightness(100%);
+  background-color: var(--white-2);
+  border-radius: 16px;
+  box-shadow: 0px 32px 32px -24px #0000001a;
+  flex-direction: column;
+  height: 136px;
+  left: 30px;
+  padding: 8px 0;
+  position: absolute;
+  top: 342px;
+  width: 283px;
+}
+
+.iphone-14-pro-max-10 .item {
+  align-items: flex-start;
+  display: flex;
+  width: 267px;
+}
+
+.iphone-14-pro-max-10 .radio-wrapper {
+  border-radius: 8px;
+  gap: 8px;
+  height: 40px;
+  padding: 0 8px;
+  width: 267px;
+}
+
+.iphone-14-pro-max-10 .controller-1 {
+  align-items: flex-start;
+  background-color: var(--storm-dust);
+  border-radius: 24px;
+  display: flex;
+  min-width: 24px;
+}
+
+.iphone-14-pro-max-10 .label {
+  letter-spacing: 0;
+  line-height: 13.2px;
+  margin-bottom: 2.0px;
+  min-height: 14px;
+  white-space: nowrap;
+  width: 219px;
+}
+
+.iphone-14-pro-max-10 .controller {
+  background-color: var(--white);
+  border-radius: 24px;
+  height: 24px;
+  width: 24px;
+}
+
+.iphone-14-pro-max-10 .frame-859 {
+  background-image: url(../img/group-2-4@2x.png);
+  background-size: 100% 100%;
+  height: 4px;
+  left: 16px;
+  position: absolute;
+  top: 286px;
+  width: 311px;
+}
+
+.iphone-14-pro-max-10 .what-is-your-hb-a1c {
+  left: 80px;
+  letter-spacing: 0;
+  line-height: 20px;
+  position: absolute;
+  top: 308px;
+  white-space: nowrap;
+}
+
+.iphone-14-pro-max-10 .frame-857 {
+  background-color: var(--white);
+  border-radius: 24px 24px 0px 0px;
+  height: 216px;
+  left: 21px;
+  position: absolute;
+  top: 53px;
+  width: 300px;
+}
+
+.iphone-14-pro-max-10 .frame-856 {
+  background-image: url(../img/hba1c-1-1@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 172px;
+  left: 66px;
+  position: absolute;
+  top: 86px;
+  width: 208px;
+}
+
+.iphone-14-pro-max-10 .frame-866 {
+  align-items: flex-start;
+  align-self: flex-end;
+  display: flex;
+  margin-right: -77px;
+  margin-top: 6px;
+  min-width: 281px;
+}

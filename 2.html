@@ -1,0 +1,251 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Fattyliverscore</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    <link rel="shortcut icon" type="image/png" href="https://animaproject.s3.amazonaws.com/home/favicon.png" />
+    <meta name="og:type" content="website" />
+    <meta name="twitter:card" content="photo" />
+    <link rel="stylesheet" type="text/css" href="css/iphone-14-pro-max-2.css" />
+    <link rel="stylesheet" type="text/css" href="css/styleguide.css" />
+    <link rel="stylesheet" type="text/css" href="css/globals.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <style>
+        #ip1 {
+            border-radius: 18px;
+            background: #600;
+            padding: 20px;
+            width: 200px;
+            height: 15px;
+        }
+                input {
+    padding: 5px;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;         /* Opera/IE 8+ */
+}
+        .button {
+            background-color: #04AA6D;
+            border: none;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+        }
+
+        .container1 {
+            height: 100%;
+            position: relative
+        }
+
+        .wrapper {
+            height: 100%;
+        }
+
+        .button1 {
+            border-radius: 2px;
+        }
+
+        .button2 {
+            border-radius: 4px;
+        }
+
+        .button3 {
+            border-radius: 8px;
+        }
+
+        .button4 {
+            border-radius: 12px;
+        }
+
+        .button5 {
+            border-radius: 50%;
+        }
+
+        .btn {
+            border: none;
+            background-color: inherit;
+            font-size: 16px;
+            cursor: pointer;
+            display: inline-block;
+        }
+
+            .btn:hover {
+                background: #eee;
+            }
+
+        .success {
+            color: green;
+        }
+
+        .info {
+            color: dodgerblue;
+        }
+
+        .warning {
+            color: orange;
+        }
+
+        .danger {
+            color: red;
+        }
+
+        .default {
+            color: black;
+        }
+
+        /* The container */
+        .container {
+            display: block;
+            position: relative;
+            padding-left: 35px;
+            margin-bottom: 12px;
+            cursor: pointer;
+            font-size: 22px;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+            /* Hide the browser's default radio button */
+            .container input {
+                position: absolute;
+                opacity: 0;
+                cursor: pointer;
+            }
+
+        /* Create a custom radio button */
+        .checkmark {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 25px;
+            width: 25px;
+            background-color: #eee;
+            border-radius: 50%;
+        }
+
+        /* On mouse-over, add a grey background color */
+        .container:hover input ~ .checkmark {
+            background-color: #ccc;
+        }
+
+        /* When the radio button is checked, add a blue background */
+        .container input:checked ~ .checkmark {
+            background-color: #2196F3;
+        }
+
+        /* Create the indicator (the dot/circle - hidden when not checked) */
+        .checkmark:after {
+            content: "";
+            position: absolute;
+            display: none;
+        }
+
+        /* Show the indicator (dot/circle) when checked */
+        .container input:checked ~ .checkmark:after {
+            display: block;
+        }
+
+        /* Style the indicator (dot/circle) */
+        .container .checkmark:after {
+            top: 9px;
+            left: 9px;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: white;
+        }
+    </style>
+    <title></title>
+</head>
+<body style="margin: 0; background: #ffffff">
+    <form id="form1" runat="server">
+       <div class="container-center-horizontal">
+      <div class="iphone-14-pro-max-2 screen">
+        <div class="frame-949">
+          <div class="ellipse-container">
+            <img class="ellipse-1" src="img/ellipse-1-1@2x.png" alt="Ellipse 1" />
+            <div class="ellipse-2"></div>
+          </div>
+        </div>
+        <div class="overlap-group2">
+          <div class="frame-952"></div>
+          <div class="frame-951"></div>
+          <div class="frame-948" style="
+    align-items: center;
+    display: flex;
+    gap: 22px;
+    height: 40px;
+    justify-content: flex-end;
+    left: 160px;
+    min-width: 162px;
+    position: absolute;
+    top: 548px;
+">
+            <div class="my-button inter-medium-shark-15px">
+               <button ID="prev-2" class="btn default"  runat="server" Text="Previous" OnClick="btnPrv_Click">Previous</button>  
+
+            </div>
+            <div>
+              <button ID="submit-btn2" class="button tabButton"  runat="server" Text="Next" OnClick="btnNext_Click">Next</button>
+            </div>
+          </div>
+         
+          <div class="form-container">
+            <div class="field-3 label-3 label-4 poppins-normal-cloud-12-9px">
+              <input id="txtname" class="poppins-normal-cloud-12-9px input-field" placeholder="Name" required>
+                <br>
+                <input type="email" id="txtemail" class="poppins-normal-cloud-12-9px input-field" placeholder="E-mail Id" required>
+                <span id="emailError" class="error-message"></span>
+                <br>
+                <input id="txtcity" class="poppins-normal-cloud-12-9px input-field" placeholder="City" required>
+                <br>
+                <input type="tel" id="txtmobile" class="poppins-normal-cloud-12-9px input-field" placeholder="Mobile No" required pattern="^\d{10}$">
+                <span id="phoneError" class="error-message"></span>
+                <br>
+                <span id="lblErrorMessage" class="error-message"></span>
+            </div>
+        </div>
+          <div class="frame-943" style="
+    background-color: var(--white);
+    border-radius: 24px 24px 0px 0px;
+    height: 216px;
+    left: 21px;
+    position: absolute;
+    top: 53px;
+    width: 300px;
+"></div>
+          <div class="frame-942"></div>
+        </div>
+        <div class="frame-950">
+          <div class="ellipse-container-1" style="height: 135px; position: relative; width: 281px;">
+            <img class="ellipse-1" src="img/ellipse-1-1@2x.png" alt="Ellipse 1" />
+            <div class="ellipse-2-1"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </form>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/js/main.js"></script>
+    <script>
+        function btnPrv_Click() {
+            window.history.back();
+        }
+    </script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/js/main.js"></script>
+    <script>
+        function btnPrv_Click() {
+            window.history.back();
+        }
+    </script>
+</body>
+</html>

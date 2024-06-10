@@ -1,0 +1,100 @@
+:root { 
+  --black: #000000;
+  --cerulean: #04abcd;
+  --charlotte: #b7f2ff;
+  --cloud: #c4c4c4;
+  --delta: #a0a3a3;
+  --lily-white: #e4faff;
+  --outer-space: #2e3d40;
+  --shark: #1f2429;
+  --shark-2: #2626263d;
+  --storm-dust: #616161;
+  --storm-dust-2: #646161;
+  --turquoise-blue: #65e1fa;
+  --white: #ffffff;
+  --white-2: #ffffffb2;
+ 
+  --font-size-m: 16px;
+  --font-size-s: 15px;
+  --font-size-xs: 14px;
+  --font-size-xxs: 12px;
+  --font-size-xxxs: 11.3px;
+  --font-size-xxxxs: 10px;
+  --font-size-xxxxxs: 8px;
+ 
+  --font-family-arial-bold: "Arial-Bold", Helvetica;
+  --font-family-inder: "Inder", Helvetica;
+  --font-family-inter: "Inter", Helvetica;
+  --font-family-poppins: "Poppins", Helvetica;
+}
+.arial-bold-storm-dust-12px {
+  color: var(--storm-dust);
+  font-family: var(--font-family-arial-bold);
+  font-size: var(--font-size-xxs);
+  font-style: normal;
+  font-weight: 700;
+}
+
+.arial-bold-storm-dust-14px {
+  color: var(--storm-dust);
+  font-family: var(--font-family-arial-bold);
+  font-size: var(--font-size-xs);
+  font-style: normal;
+  font-weight: 700;
+}
+
+.inter-medium-shark-15px {
+  color: var(--shark);
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-s);
+  font-style: normal;
+  font-weight: 500;
+}
+
+.inter-medium-white-15px {
+  color: var(--white);
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-s);
+  font-style: normal;
+  font-weight: 500;
+}
+
+.inter-semi-bold-shark-16px {
+  color: var(--shark);
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 700;
+}
+
+.inter-semi-bold-delta-11-3px {
+  color: var(--delta);
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-xxxs);
+  font-style: normal;
+  font-weight: 600;
+}
+
+.poppins-normal-cloud-12-9px {
+  color: var(--cloud);
+  font-family: var(--font-family-poppins);
+  font-size: 12.9px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.inter-semi-bold-storm-dust-8px {
+  color: var(--storm-dust-2);
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-xxxxxs);
+  font-style: normal;
+  font-weight: 600;
+}
+
+.inter-semi-bold-outer-space-12px {
+  color: var(--outer-space);
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-xxs);
+  font-style: normal;
+  font-weight: 600;
+}

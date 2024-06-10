@@ -1,0 +1,183 @@
+/* screen - iphone-14-pro-max-2 */
+
+.iphone-14-pro-max-2 {
+    align-items: flex-start;
+    border: 1px none;
+    display: flex;
+    flex-direction: column;
+    height: 932px;
+    overflow: hidden;
+    width: 430px;
+}
+
+    .iphone-14-pro-max-2 .frame-949 {
+        align-items: flex-start;
+        display: flex;
+        justify-content: flex-end;
+        margin-left: -111px;
+        margin-top: -101px;
+        min-width: 309px;
+    }
+
+    .iphone-14-pro-max-2 .overlap-group2 {
+        align-self: center;
+        height: 594px;
+        margin-right: 2.0px;
+        margin-top: 19px;
+        position: relative;
+        width: 340px;
+    }
+
+    .iphone-14-pro-max-2 .frame-952 {
+        background-color: #64e0f9;
+        border-radius: 24px 24px 0px 0px;
+        height: 451px;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 340px;
+    }
+
+    .iphone-14-pro-max-2 .frame-951 {
+        background-color: var(--charlotte);
+        border-radius: 24px 24px 0px 0px;
+        height: 325px;
+        left: 0;
+        position: absolute;
+        top: 269px;
+        width: 340px;
+    }
+
+    .iphone-14-pro-max-2 .frame-948 {
+        align-items: center;
+        display: flex;
+        gap: 22px;
+        height: 40px;
+        justify-content: flex-end;
+        left: 160px;
+        min-width: 148px;
+        position: absolute;
+        top: 478px;
+    }
+
+    .iphone-14-pro-max-2 .my-button {
+        letter-spacing: 0;
+        line-height: 20px;
+        margin-bottom: 2.0px;
+        min-width: 62px;
+        white-space: nowrap;
+    }
+
+    .iphone-14-pro-max-2 .button {
+        align-items: flex-start;
+        background-color: var(--shark);
+        border-radius: 100000px;
+        display: flex;
+        height: 40px;
+        min-width: 62px;
+        padding: 9px 14px;
+    }
+
+    .iphone-14-pro-max-2 .my-button-1 {
+        letter-spacing: 0;
+        line-height: 20px;
+        white-space: nowrap;
+    }
+
+    .iphone-14-pro-max-2 .field {
+        align-items: flex-start;
+        ;
+        padding: 12.1px 17.7px;
+        position: absolute;
+        top: 359px;
+    }
+
+    .iphone-14-pro-max-2 .label {
+        letter-spacing: 0;
+        line-height: normal;
+        min-height: 19px;
+        min-width: 58px;
+        text-align: center;
+    }
+
+    .iphone-14-pro-max-2 .field-1 {
+        left: 37px;
+        top: 418px;
+    }
+
+    .iphone-14-pro-max-2 .label-1 {
+        min-width: 66px;
+    }
+
+    .iphone-14-pro-max-2 .field-2 {
+        left: 38px;
+        top: 475px;
+    }
+
+    .iphone-14-pro-max-2 .label-2 {
+        min-width: 26px;
+    }
+
+    .iphone-14-pro-max-2 .field-3 {
+        left: 41px;
+        top: 300px;
+    }
+
+    .iphone-14-pro-max-2 .label-3 {
+        min-width: 39px;
+    }
+
+    .iphone-14-pro-max-2 .frame-943 {
+        border-radius: 24px 24px 0px 0px;
+        height: 216px;
+        left: 21px;
+        position: absolute;
+        top: 53px;
+        width: 300px;
+    }
+
+    .iphone-14-pro-max-2 .frame-942 {
+        background-image: url(../img/hg2w-gzck-211029-1-2@2x.png);
+        background-position: 50% 50%;
+        background-size: cover;
+        height: 172px;
+        left: 63px;
+        position: absolute;
+        top: 75px;
+        width: 216px;
+    }
+
+    .iphone-14-pro-max-2 .frame-950 {
+        align-items: flex-start;
+        align-self: flex-end;
+        display: flex;
+        margin-right: -77px;
+        margin-top: 6px;
+        min-width: 281px;
+    }
+
+    .iphone-14-pro-max-2 .field-4 {
+        align-items: flex-start;
+        border-radius: 20px;
+        display: flex;
+        height: 45px;
+        min-width: 266px;
+        padding: 12.1px 17.7px;
+        position: absolute;
+    }
+
+    .iphone-14-pro-max-2 .label-4 {
+        letter border-radius: 20px;
+        height: 45px;
+        min-width: 266px;
+        padding: 12.1px 17.7px;
+        position: absolute;
+    }
+
+    .iphone-14-pro-max-2 .label-4 {
+        letter-spacing: 0;
+        line-height: normal;
+        min-height: 19px;
+        text-align: center;
+        padding: 1px 2px;
+    }

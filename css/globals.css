@@ -1,0 +1,109 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+@import url("https://fonts.googleapis.com/css?family=Inter:500,600,800|Poppins:400|Inder:400|Jost:400");
+/* The following line is used to measure usage of this code in production. For more info see our usage billing page */
+@import url("https://px.animaapp.com/64674d36ddb124ed53d62026.64689ca1c9c9cbde9bf8ce16.3ufeyro.hcp.png");
+
+@font-face {
+  font-family: "Arial-Bold";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/FontsFree-Net-arial-bold.ttf") format("truetype");
+}
+
+
+.screen a {
+  display: contents;
+  text-decoration: none;
+}
+
+.container-center-horizontal {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  pointer-events: none;
+  width: 100%;
+}
+
+.container-center-horizontal > * {
+  flex-shrink: 0;
+  pointer-events: auto;
+}
+
+.valign-text-middle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.ellipse-container {
+  height: 262px;
+  position: relative;
+  width: 309px;
+}
+
+.ellipse-1 {
+  height: 200px;
+  left: 0;
+  position: absolute;
+  top: 62px;
+  width: 200px;
+}
+
+.ellipse-2 {
+  background-color: var(--lily-white);
+  border-radius: 100px;
+  height: 200px;
+  left: 109px;
+  position: absolute;
+  top: 0;
+  width: 200px;
+}
+
+.thumb {
+  align-items: center;
+  background-color: var(--storm-dust);
+  border-radius: 24px;
+  display: flex;
+  height: 24px;
+  min-width: 24px;
+  padding: 0 6px;
+}
+
+.circle {
+  background-color: var(--white);
+  border-radius: 6px;
+  height: 12px;
+  width: 12px;
+}
+
+.ellipse-container-1 {
+  height: 262px;
+  position: relative;
+  width: 281px;
+}
+
+.ellipse-2-1 {
+  background-color: var(--lily-white);
+  border-radius: 100px;
+  height: 200px;
+  left: 81px;
+  position: absolute;
+  top: 0;
+  width: 200px;
+}
+
+.radio {
+  align-items: center;
+  display: flex;
+  overflow: hidden;
+}
+
+.my-button-3 {
+  letter-spacing: 0;
+  line-height: 20px;
+  white-space: nowrap;
+}
