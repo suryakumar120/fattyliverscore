@@ -45,7 +45,7 @@ $(function () {
         localStorage.setItem('dataObject', JSON.stringify(dataObject));
 
         // Make a POST request to the server
-        $.post('https://same-server-dev.azurewebsites.net/save-data', { data: JSON.stringify(dataObject) })
+        $.post('https://wordle-server2-heaqgnd3encpb3ak.southeastasia-01.azurewebsites.net/save-data', { data: JSON.stringify(dataObject) })
             .done(function (response) {
                 // Redirect to the specified URL on success
                 window.location.href = redirectUrl;
