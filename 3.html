@@ -1,217 +1,533 @@
-
 <!DOCTYPE html>
-
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Fattyliverscore</title>
-   <meta charset="utf-8" />
-    <!--<meta name=description content="This site was generated with Anima. www.animaapp.com"/>-->
-    <!-- <link rel="shortcut icon" type=image/png href="https://animaproject.s3.amazonaws.com/home/favicon.png" /> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
     <link rel="shortcut icon" type="image/png" href="https://animaproject.s3.amazonaws.com/home/favicon.png" />
     <meta name="og:type" content="website" />
     <meta name="twitter:card" content="photo" />
-    <link rel="stylesheet" type="text/css" href="css/iphone-14-pro-max-3.css" />
-    <link rel="stylesheet" type="text/css" href="css/styleguide.css" />
-    <link rel="stylesheet" type="text/css" href="css/globals.css" />
     <style>
-          .button {
-            background-color: #04AA6D;
-            border: none;
-            color: white;
+        /* Reset and base styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #ffffff;
+            overflow-x: hidden;
+            min-height: 100vh;
+        }
+
+        /* Container for centering */
+        .container-center-horizontal {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
             padding: 20px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-            margin: 4px 2px;
         }
 
-        .container1 {
+        /* Main screen container */
+        .iphone-14-pro-max-3 {
+            position: relative;
+            width: 100%;
+            max-width: 430px;
+            min-height: 100vh;
+            background: #ffffff;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+        }
+
+        /* Background elements */
+        .frame-940 {
+            position: absolute;
+            top: -50px;
+            right: -50px;
+            width: min(309px, 60vw);
+            height: min(262px, 50vw);
+            z-index: 0;
+        }
+
+        .ellipse-container {
+            position: relative;
+            width: 100%;
             height: 100%;
-            position: relative
         }
 
-        .wrapper {
-            height: 100%;
-        }
-
-        .button1 {
-            border-radius: 2px;
-        }
-
-        .button2 {
-            border-radius: 4px;
-        }
-
-        .button3 {
-            border-radius: 8px;
-        }
-
-        .button4 {
-            border-radius: 12px;
-        }
-
-        .button5 {
+        .ellipse-1 {
+            position: absolute;
+            width: min(200px, 40vw);
+            height: min(200px, 40vw);
+            top: 62px;
+            left: 0;
             border-radius: 50%;
         }
 
-        .btn {
-            border: none;
-            background-color: inherit;
-            font-size: 16px;
-            cursor: pointer;
-            display: inline-block;
+        .ellipse-2 {
+            position: absolute;
+            background-color: #e4faff;
+            border-radius: 50%;
+            width: min(200px, 40vw);
+            height: min(200px, 40vw);
+            top: 0;
+            right: 0;
         }
 
-            .btn:hover {
-                background: #eee;
-            }
-
-        .success {
-            color: green;
-        }
-
-        .info {
-            color: dodgerblue;
-        }
-
-        .warning {
-            color: orange;
-        }
-
-        .danger {
-            color: red;
-        }
-
-        .default {
-            color: black;
-        }
-
-        /* The container */
-        .container {
-            display: block;
+        /* Main content area */
+        .overlap-group2 {
             position: relative;
-            padding-left: 35px;
-            margin-bottom: 12px;
-            cursor: pointer;
-            font-size: 22px;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
-            user-select: none;
+            width: 100%;
+            max-width: 340px;
+            margin: 0 auto;
+            background: linear-gradient(to bottom, #64e0f9 0%, #64e0f9 50%, #b7f2ff 50%, #b7f2ff 100%);
+            border-radius: 24px 24px 0 0;
+            padding: 20px;
+            margin-top: 2rem;
+            min-height: 600px;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
         }
 
-
-            /* Hide the browser's default radio button */
-            .container input {
-                position: absolute;
-                opacity: 0;
-                cursor: pointer;
-            }
-
-        /* Create a custom radio button */
-        .checkmark {
+        /* Background sections */
+        .frame-939 {
             position: absolute;
             top: 0;
             left: 0;
-            height: 25px;
-            width: 25px;
-            background-color: #eee;
-            border-radius: 50%;
+            right: 0;
+            height: 50%;
+            background-color: #64e0f9;
+            border-radius: 24px 24px 0 0;
         }
 
-        /* On mouse-over, add a grey background color */
-        .container:hover input ~ .checkmark {
-            background-color: #ccc;
-        }
-
-        /* When the radio button is checked, add a blue background */
-        .container input:checked ~ .checkmark {
-            background-color: #2196F3;
-        }
-
-        /* Create the indicator (the dot/circle - hidden when not checked) */
-        .checkmark:after {
-            content: "";
+        .frame-938 {
             position: absolute;
-            display: none;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 55%;
+            background-color: #b7f2ff;
+            border-radius: 24px 24px 0 0;
         }
 
-        /* Show the indicator (dot/circle) when checked */
-        .container input:checked ~ .checkmark:after {
-            display: block;
+        /* Top section for image */
+        .image-section {
+            position: relative;
+            height: 250px;
+            margin-bottom: 20px;
+            flex-shrink: 0;
         }
 
-        /* Style the indicator (dot/circle) */
-        .container .checkmark:after {
-            top: 9px;
-            left: 9px;
-            width: 8px;
-            height: 8px;
+        /* White content section */
+        .frame-935 {
+            position: absolute;
+            top: 20px;
+            left: 21px;
+            right: 21px;
+            height: 216px;
+            background-color: white;
+            border-radius: 24px 24px 0 0;
+            z-index: 1;
+        }
+
+        /* Background image */
+        .frame-934 {
+            position: absolute;
+            top: 45px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: min(216px, 50vw);
+            height: min(172px, 40vw);
+            background-image: url('img/hg2w-gzck-211029-1-2@2x.png');
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            z-index: 2;
+        }
+
+        /* Disclaimer content */
+        .disclaimer-section {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            width: 100%;
+            flex-grow: 1;
+            padding: 0 14px;
+        }
+
+        .disclaimer-this-risk {
+            color: #1f2429;
+            font-size: clamp(14px, 3.5vw, 16px);
+            font-weight: 600;
+            line-height: 1.4;
+            text-align: justify;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 16px;
+            backdrop-filter: blur(8px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .disclaimer-title {
+            font-size: clamp(16px, 4vw, 18px);
+            font-weight: 700;
+            color: #1f2429;
+            margin-bottom: 10px;
+        }
+
+        .disclaimer-text {
+            font-size: clamp(13px, 3.2vw, 14px);
+            font-weight: 600;
+            color: #1f2429;
+            line-height: 1.5;
+        }
+
+        /* Navigation buttons */
+        .frame-937 {
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 22px;
+            margin-top: 20px;
+            z-index: 3;
+        }
+
+        .btn {
+            background: transparent;
+            border: none;
+            color: #1f2429;
+            font-size: 15px;
+            font-weight: 500;
+            cursor: pointer;
+            padding: 10px 15px;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            background: rgba(0, 0, 0, 0.05);
+        }
+
+        .button {
+            background-color: #1f2429;
+            border: none;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 20px;
+            font-size: 15px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            min-width: 80px;
+        }
+
+        .button:hover {
+            background-color: #2a3035;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(31, 36, 41, 0.3);
+        }
+
+        .button:active {
+            transform: translateY(0);
+        }
+
+        /* Bottom background element */
+        .frame-941 {
+            position: absolute;
+            bottom: -50px;
+            right: -50px;
+            width: min(281px, 55vw);
+            height: min(135px, 25vw);
+            z-index: 0;
+        }
+
+        .ellipse-container-1 {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        .ellipse-2-1 {
+            position: absolute;
+            background-color: #e4faff;
             border-radius: 50%;
-            background: white;
+            width: min(200px, 40vw);
+            height: min(200px, 40vw);
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        /* Responsive breakpoints */
+        @media (max-width: 480px) {
+            .container-center-horizontal {
+                padding: 10px;
+            }
+            
+            .iphone-14-pro-max-3 {
+                padding: 15px;
+            }
+            
+            .overlap-group2 {
+                min-height: 550px;
+                padding: 15px;
+            }
+            
+            .image-section {
+                height: 200px;
+                margin-bottom: 15px;
+            }
+            
+            .disclaimer-section {
+                gap: 15px;
+                padding: 0 10px;
+            }
+            
+            .disclaimer-this-risk {
+                padding: 15px;
+            }
+            
+            .frame-937 {
+                gap: 15px;
+                margin-top: 15px;
+            }
+            
+            .button {
+                padding: 10px 20px;
+                font-size: 14px;
+                min-width: 70px;
+            }
+            
+            .btn {
+                padding: 8px 12px;
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 360px) {
+            .overlap-group2 {
+                min-height: 500px;
+                padding: 12px;
+            }
+            
+            .image-section {
+                height: 160px;
+                margin-bottom: 12px;
+            }
+            
+            .disclaimer-section {
+                gap: 12px;
+                padding: 0 8px;
+            }
+            
+            .disclaimer-this-risk {
+                padding: 12px;
+            }
+            
+            .frame-937 {
+                gap: 10px;
+                flex-direction: column-reverse;
+                align-items: stretch;
+            }
+            
+            .button, .btn {
+                width: 100%;
+                text-align: center;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .container-center-horizontal {
+                padding: 40px;
+            }
+            
+            .iphone-14-pro-max-3 {
+                max-width: 500px;
+                padding: 30px;
+            }
+            
+            .overlap-group2 {
+                min-height: 650px;
+                padding: 25px;
+            }
+            
+            .image-section {
+                height: 280px;
+                margin-bottom: 25px;
+            }
+            
+            .disclaimer-section {
+                gap: 25px;
+                padding: 0 16px;
+            }
+            
+            .disclaimer-this-risk {
+                padding: 25px;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .iphone-14-pro-max-3 {
+                max-width: 600px;
+            }
+        }
+
+        /* Animation */
+        .iphone-14-pro-max-3 {
+            animation: slideIn 0.6s ease-out;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateX(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        /* Focus styles for accessibility */
+        .button:focus,
+        .btn:focus {
+            outline: 3px solid #04abcd;
+            outline-offset: 2px;
+        }
+
+        /* High contrast mode */
+        @media (prefers-contrast: high) {
+            .frame-939 {
+                background-color: #000;
+            }
+            
+            .frame-938 {
+                background-color: #333;
+            }
+            
+            .disclaimer-this-risk {
+                border: 2px solid #000;
+                background: #fff;
+            }
+        }
+
+        /* Reduced motion */
+        @media (prefers-reduced-motion: reduce) {
+            .iphone-14-pro-max-3 {
+                animation: none;
+            }
+            
+            .button,
+            .btn {
+                transition: none;
+            }
+            
+            .button:hover {
+                transform: none;
+            }
+        }
+
+        /* Text selection */
+        .disclaimer-this-risk {
+            user-select: text;
+            -webkit-user-select: text;
+        }
+
+        /* Smooth scrolling for long content */
+        .disclaimer-section {
+            overflow-y: auto;
+            scrollbar-width: thin;
+            scrollbar-color: #ccc transparent;
+        }
+
+        .disclaimer-section::-webkit-scrollbar {
+            width: 4px;
+        }
+
+        .disclaimer-section::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        .disclaimer-section::-webkit-scrollbar-thumb {
+            background-color: #ccc;
+            border-radius: 2px;
         }
     </style>
 </head>
 <body>
-    <form id="form1" >
-         <div class="container-center-horizontal">
-              <div class="iphone-14-pro-max-3 screen">
-                  <div class="frame-940">
-                      <div class="ellipse-container">
-                          <img class="ellipse-1" src="img/ellipse-1-1@2x.png" alt="Ellipse 1" />
-                          <div class="ellipse-2"></div>
-                      </div>
-                  </div>
-                  <div class="overlap-group2">
-                      <div class="frame-939"></div>
-                      <div class="frame-938"></div>
-                      <div class="frame-937">
-                          <div class="my-button inter-medium-shark-15px">
-                              <span class="inter-medium-shark-15px">
-                            
-                                <button ID="prev-3" class="btn default"  runat="server" Text="Previous" OnClick="btnPrv_Click">Previous</button>  
-                            
-                              </span>
-                          </div>
-
-                          <div>
-                               <button ID="submit-btn3" class="button"   Text="Next" >Next</button> 
-                            
-                          </div>
-                      </div>
-                      <p class="disclaimer-this-risk inter-semi-bold-shark-16px">
-                          <span class="inter-semi-bold-shark-16px">
-                              Disclaimer<br />
-                              <br />
-                          </span><span class="span1">
-                              This Risk Assessment Tool is not intended to offer medical advice or to suggest a treatment.
-                              <br />
-                              In
-                              case of high score, you need to consult your Doctor for further assessment &amp; advice.
-                              <br />
-                              
-                          </span>
-                      </p>
-                      <div class="frame-935"></div>
-                      <div class="frame-934"></div>
-                  </div>
-                  <div class="frame-941">
-                      <div class="ellipse-container-1" style="height: 135px; position: relative; width: 281px;">
-                          <img class="ellipse-1" src="img/ellipse-1-1@2x.png" alt="Ellipse 1" />
-                          <div class="ellipse-2-1"></div>
-                      </div>
-                  </div>
-              </div>
-          </div>
+    <form id="form1">
+        <div class="container-center-horizontal">
+            <div class="iphone-14-pro-max-3 screen">
+                <div class="frame-940">
+                    <div class="ellipse-container">
+                        <img class="ellipse-1" src="img/ellipse-1-1@2x.png" alt="Ellipse 1" />
+                        <div class="ellipse-2"></div>
+                    </div>
+                </div>
+                
+                <div class="overlap-group2">
+                    <div class="frame-939"></div>
+                    <div class="frame-938"></div>
+                    
+                    <div class="image-section">
+                        <div class="frame-935"></div>
+                        <div class="frame-934"></div>
+                    </div>
+                    
+                    <div class="disclaimer-section">
+                        <div class="disclaimer-this-risk">
+                            <div class="disclaimer-title">Disclaimer</div>
+                            <div class="disclaimer-text">
+                                This Risk Assessment Tool is not intended to offer medical advice or to suggest a treatment.
+                                <br><br>
+                                In case of high score, you need to consult your Doctor for further assessment & advice.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="frame-937">
+                        <button ID="prev-3" class="btn" type="button" onclick="btnPrv_Click()">Previous</button>
+                        <button ID="submit-btn3" class="button" type="button" onclick="btnNext_Click()">Next</button>
+                    </div>
+                </div>
+                
+                <div class="frame-941">
+                    <div class="ellipse-container-1">
+                        <img class="ellipse-1" src="img/ellipse-1-1@2x.png" alt="Ellipse 1" />
+                        <div class="ellipse-2-1"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </form>
-    
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="/js/main.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
         function btnPrv_Click() {
-            window.history.back();
+            // Direct navigation to previous page instead of browser history
+            window.location.href = '/2.html';
+        }
+        
+        function btnNext_Click() {
+            // Navigate to next page
+            window.location.href = '/4.html';
+        }
+
+        // Add click event listeners
+        document.getElementById('prev-3').addEventListener('click', btnPrv_Click);
+        document.getElementById('submit-btn3').addEventListener('click', btnNext_Click);
+
+        // Smooth scroll for disclaimer content if it overflows
+        const disclaimerSection = document.querySelector('.disclaimer-section');
+        if (disclaimerSection.scrollHeight > disclaimerSection.clientHeight) {
+            disclaimerSection.style.paddingRight = '10px';
         }
     </script>
 </body>
