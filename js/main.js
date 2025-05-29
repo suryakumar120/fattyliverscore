@@ -532,6 +532,7 @@ $(function () {
             if (dataFinal.Total !== undefined) {
                 console.log("dataFinal.Total =", dataObject);
                 $("#lblResult").text(dataFinal.Total);
+                 updateSlider(dataFinal.Total); // ADD THIS LINE
             } else {
                 console.log("Total score is not defined in dataFinal.");
             }
@@ -635,6 +636,17 @@ $(function () {
         dataObject.Total -= Total;
         saveDataAndRedirect('12.html');
     });
+
+    //slider 
+
+    function updateSlider(score) {
+        // Calculate position (score out of 15, converted to percentage)
+        let position = Math.min(Math.max(score / 15 * 100, 0), 100);
+
+        // Position the "You are here" indicator
+        $('#youAreHere').css('left', position + '%');
+        $('#arrowIndicator').css('left', position + '%');
+    }
 
 
 });

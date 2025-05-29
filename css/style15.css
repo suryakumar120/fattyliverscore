@@ -9,4 +9,4 @@
 ._9 {color: #ff0000; text-align: center; font: 600 50px/60px 'Inter', sans-serif; position: absolute; left: calc(50% - 17px);top: 483px;}
 .unhealthy-liver-score {color: #ff0000; text-align: center; font: 600 50px/60px 'Inter', sans-serif; position: absolute; left: calc(50% - 136px);top: 358px;}
 .logo {display: flex; flex-direction: column; gap: 10px; align-items: center; justify-content: center; position: absolute; left: 218px;top: 93px;}
-.image-2 {flex-shrink: 0; width: 191px; height: 64px; position: relative;}
+.image-2 {flex-shrink: 0; width: 190px; height: 100px; position: relative;}

@@ -1,16 +1,112 @@
-
 <!DOCTYPE html>
-
-
-
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/style15.css">
+    <title>Fattyliverscore</title>
+    <style>
+        .you-are-at-high-risk-for-non-alcoholic-fatty-liver-disease-nafld-consult-your-doctor-at-the-earliest-and-ask-about-nafld-and-further-steps-to-the-taken-for-more-insights-about-liver-health-visit-our-nash-24-x-7-website {color: #ff2020; text-align: center; font: 600 16px/20.13px 'Inter', sans-serif; position: absolute; left: calc(50% - 179px);top: 628px; width: 358px;}
+        .note-this-risk-assessment-tool-is-not-intended-as-medical-advice-or-to-suggest-treatment-the-study-investigators-recommend-that-you-consult-your-physician-or-other-healthcare-professional-for-advice {color: #6c6d6d; text-align: center; font: 600 14px/20.13px 'Inter', sans-serif; position: absolute; left: calc(50% - 192px);top: 826px; width: 383px;}
+        .https-www-nash-24-x-7-com {color: #6c6d6d; text-align: center; font: 600 18px/20.13px 'Inter', sans-serif; text-decoration: underline; position: absolute; left: calc(50% - 125px);top: 778px;}
 
-    <title>Document</title>
+        /* Risk Slider Styles - Fixed spacing */
+        .risk-slider-container {
+            position: absolute;
+            left: calc(50% - 175px);
+            top: 540px;
+            width: 350px;
+            padding: 10px;
+        }
+
+        .risk-slider-labels {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            font-size: 14px;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .risk-slider {
+            position: relative;
+            height: 30px;
+            border-radius: 15px;
+            overflow: visible;
+            margin-bottom: 10px; /* Reduced from 50px to 10px */
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .slider-track {
+            height: 100%;
+            display: flex;
+        }
+
+        .low-risk {
+            background: #4CAF50;
+            width: 33.33%; /* 0-4 section */
+        }
+
+        .moderate-risk {
+            background: #FF9800;
+            width: 33.33%; /* 4-8 section */
+        }
+
+        .high-risk {
+            background: #FF5722;
+            width: 33.34%; /* 8-15 section */
+        }
+
+        .slider-numbers {
+            display: flex;
+            justify-content: space-between;
+            font-size: 12px;
+            color: #666;
+            margin-bottom: 15px;
+            margin-top: 5px; /* Added small top margin for better spacing */
+        }
+
+        .you-are-here {
+            position: absolute;
+            top: 40px;
+            transform: translateX(-50%);
+            background: #333;
+            color: white;
+            padding: 6px 12px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 600;
+            white-space: nowrap;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            z-index: 1000;
+            display: block;
+            visibility: visible;
+        }
+
+        .you-are-here::after {
+            content: '';
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            border: 6px solid transparent;
+            border-bottom-color: #333;
+        }
+
+        .arrow-indicator {
+            position: absolute;
+            top: -40px;
+            transform: translateX(-50%);
+            font-size: 20px;
+            color: #333;
+            z-index: 999;
+            display: block;
+            visibility: visible;
+            font-weight: bold;
+            display: none;
+        }
+    </style>
 </head>
 <body style="max-width: 500px; margin: auto; background: white; padding: 10px;">
     <form id="form1" runat="server">
@@ -23,9 +119,54 @@
             <div class="ellipse-2"></div>
         </div>
 
+        <div class="you-are-at-high-risk-for-non-alcoholic-fatty-liver-disease-nafld-consult-your-doctor-at-the-earliest-and-ask-about-nafld-and-further-steps-to-the-taken-for-more-insights-about-liver-health-visit-our-nash-24-x-7-website">
+            You are at high risk for Metabolic dysfunction-Associated Steatotic Liver Disease (MASLD). Consult
+    your doctor at the earliest and ask about MASLD and further steps to the
+    taken<br>
+            For more insights about liver health,<br>
+            visit our Ayushman liver website.
+ 
+        </div>
+
+        <div class="_9">
+            <Label ID="lblResult" runat="server"></Label>
+        </div>
+
+        <div class="unhealthy-liver-score">Unhealthy
+            <br>
+            Liver Score</div>
+
+        <!-- Risk Slider Component - Fixed spacing -->
+        <div class="risk-slider-container">
+            <div class="risk-slider-labels">
+                <span>Low Risk</span>
+                <span>Moderate Risk</span>
+                <span>High Risk</span>
+            </div>
+            
+            <div class="risk-slider">
+                <div class="slider-track">
+                    <div class="low-risk"></div>
+                    <div class="moderate-risk"></div>
+                    <div class="high-risk"></div>
+                </div>
+                
+                <!-- You Are Here indicator -->
+                <div class="arrow-indicator" id="arrowIndicator">↓</div>
+                <div class="you-are-here" id="youAreHere">You are here</div>
+            </div>
+            
+            <div class="slider-numbers">
+                <span>0</span>
+                <span>4</span>
+                <span>8</span>
+                <span></span>
+            </div>
+        </div>
+
         <div class="note-this-risk-assessment-tool-is-not-intended-as-medical-advice-or-to-suggest-treatment-the-study-investigators-recommend-that-you-consult-your-physician-or-other-healthcare-professional-for-advice">
             Note: This risk assessment tool is not intended as medical advice or to
-    suggest treatment.<br>
+    suggest treatment.
             <br>
             The study investigators recommend that you
     consult your physician or other healthcare professional for advice.
@@ -57,6 +198,36 @@
     </div>
     </form>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        // Function to update slider position
+        function updateSlider(score) {
+            // Calculate position (score out of 15, converted to percentage)
+            let position = Math.min(Math.max(score / 15 * 100, 0), 100);
+            
+            // Position the "You are here" indicator
+            $('#youAreHere').css('left', position + '%');
+            $('#arrowIndicator').css('left', position + '%');
+        }
+
+        $(document).ready(function() {
+            // Default score for testing (since localStorage is not available in this environment)
+            let score = 9;
+            
+            // Try to get from URL parameters as backup
+            const urlParams = new URLSearchParams(window.location.search);
+            const urlScore = urlParams.get('score');
+            if (urlScore) {
+                score = parseInt(urlScore);
+                console.log("Score from URL:", score);
+            }
+            
+            // Update the label and slider
+            $("#lblResult").text(score);
+            updateSlider(score);
+            
+            console.log("Final score used:", score);
+        });
+    </script>
     <script src="/js/main.js"></script>
     
 </body>
