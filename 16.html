@@ -182,7 +182,7 @@
 
         /* Website Link */
         .website-link {
-            color: #6c6d6d;
+            color: #000000;
             text-align: center;
             font: 600 18px/20.13px 'Inter', sans-serif;
             text-decoration: underline;
@@ -290,7 +290,7 @@
         <div class="success-message">
             Your liver is healthy. We appreciate your commitment to maintaining good liver health. Get in touch with your doctor to know more about Liver Health and how to keep it healthy in the long run.<br>
             <br>For more insights about liver health,<br>
-            visit our <a class="success-message" href="https://ayushmanliver.com/">Ayushman liver website.</a>
+            visit our <a class="website-link" href="https://ayushmanliver.com/">Ayushman liver website.</a>
         </div>
 
         <div class="disclaimer">
@@ -307,19 +307,35 @@
         }
 
         $(document).ready(function() {
-            let score = 2;
+            let score = 2; // Default fallback value
             
+            // First priority: Check localStorage for the calculated score
+            const storedData = localStorage.getItem('dataObject');
+            if (storedData) {
+                try {
+                    const parsedData = JSON.parse(storedData);
+                    if (parsedData.Total !== undefined && parsedData.Total !== null) {
+                        score = parsedData.Total;
+                        console.log("Score from localStorage:", score);
+                    }
+                } catch (e) {
+                    console.error("Error parsing localStorage data:", e);
+                }
+            }
+            
+            // Second priority: Check URL parameters (override localStorage if present)
             const urlParams = new URLSearchParams(window.location.search);
             const urlScore = urlParams.get('score');
             if (urlScore) {
                 score = parseInt(urlScore);
-                console.log("Score from URL:", score);
+                console.log("Score from URL (overriding localStorage):", score);
             }
             
+            // Update the display
             $("#lblResult").text(score);
             updateSlider(score);
             
-            console.log("Final score used:", score);
+            console.log("Final score displayed:", score);
         });
     </script>
 </body>
